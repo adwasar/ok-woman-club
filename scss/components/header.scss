@@ -5,10 +5,14 @@
     align-items: center;
     gap: 30px;
     height: 90px;
-
+    @include md {
+      height: 60px;
+    }
   }
 
   &__nav {
+    position: relative;
+    left: 5px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -43,6 +47,15 @@
   align-items: center;
   gap: 13px;
   cursor: pointer;
+  @include md {
+    gap: 9px;
+  }
+}
+
+.logo-img {
+  @include md {
+    width: 32px;
+  }
 }
 
 .logo-text {
@@ -53,9 +66,13 @@
   &__highlight {
     color: $color-text-secondary;
   }
+  @include md {
+    font-size: 16px;
+  }
 }
 
-.burger-btn { //!TEMP
+.burger-btn {
+  //!TEMP
   display: none;
   width: 30px;
   height: 30px;

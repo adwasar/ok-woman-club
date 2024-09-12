@@ -1,0 +1,14 @@
+.button {
+  padding: 5px 23px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-button;
+  color: $color-text-inverted;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.48px;
+  border: none;
+  border-radius: 5px;
+}
