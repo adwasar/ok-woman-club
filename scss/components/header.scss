@@ -12,7 +12,7 @@
 
   &__nav {
     position: relative;
-    left: 5px;
+    left: 9px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -72,11 +72,33 @@
 }
 
 .burger-btn {
-  //!TEMP
   display: none;
-  width: 30px;
+  position: relative;
+  width: 32px;
   height: 30px;
-  background-color: red;
+  background-color: transparent;
+  border: none;
+  &__line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-text-secondary;
+    border-radius: 2px;
+  }
+
+  &__line--top {
+    top: 5px;
+  }
+
+  &__line--middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__line--bottom {
+    bottom: 5px;
+  }
   @include lg {
     display: block;
   }
