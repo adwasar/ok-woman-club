@@ -35,4 +35,12 @@
 
 body {
   font-family: 'Gilroy', sans-serif;
+  color: $color-text-primary;
+  background-color: $color-canvas;
+  font-size: 16px;
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
 }

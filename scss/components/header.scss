@@ -1,0 +1,21 @@
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+  }
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
