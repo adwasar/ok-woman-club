@@ -3,7 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
     height: 90px;
+
   }
 
   &__nav {
@@ -17,11 +19,22 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.48px;
+    @include lg {
+      display: none;
+    }
   }
 
   &__nav-link {
     text-decoration: none;
     color: inherit;
+  }
+
+  &__auth-actions {
+    display: flex;
+    gap: 15px;
+    @include lg {
+      display: none;
+    }
   }
 }
 
@@ -39,5 +52,15 @@
   letter-spacing: 0.626px;
   &__highlight {
     color: $color-text-secondary;
+  }
+}
+
+.burger-btn { //!TEMP
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  @include lg {
+    display: block;
   }
 }
