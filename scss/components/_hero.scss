@@ -1,0 +1,106 @@
+.hero {
+  padding: 90px 0 0;
+  background-image: url('../../assets/img/hero-bg.png');
+  background-size: cover;
+  &__content {
+    display: flex;
+    gap: 54px;
+  }
+
+  &__main-section {
+    padding-bottom: 56px;
+  }
+
+  &__collection-materials-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+    letter-spacing: 0.72px;
+  }
+
+  &__collection-materials-image {
+  }
+
+  &__collection-materials-text {
+    position: relative;
+    top: 2px;
+    margin-left: 18px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__collection-materials-logo-text {
+    position: relative;
+    top: 2px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+  &__title {
+    margin: 18px 0 0 1px;
+    max-width: 525px;
+    font-size: 85px;
+    font-weight: 800;
+    line-height: 115%;
+    letter-spacing: 2.55px;
+    text-transform: uppercase;
+  }
+
+  &__title-highlight {
+    color: $color-text-secondary;
+  }
+
+  &__text {
+    margin-top: 13px;
+    max-width: 505px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.54px;
+  }
+
+  &__text-highlight {
+    font-weight: 700;
+  }
+
+  &__feedback {
+    position: relative;
+    padding: 20px 20px 20px 65px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.54px;
+    border-radius: 10px;
+    background-image: url('../../assets/img/feedback-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 491px;
+  }
+
+  &__feedback-icon {
+    position: absolute;
+    left: -20px;
+    border-radius: 50%;
+    opacity: 1;
+    display: none;
+  }
+
+  &__feedback-text {
+    margin: 3px 0 0;
+  }
+
+  &__button {
+    margin-top: 25px;
+  }
+
+  &__image-section {
+    display: flex;
+    align-items: end;
+  }
+}

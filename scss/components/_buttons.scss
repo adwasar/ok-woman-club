@@ -1,0 +1,29 @@
+.button-auth {
+  padding: 5px 23px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-button;
+  color: $color-text-inverted;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.48px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-main {
+  display: flex;
+  padding: 15px 48px;
+  justify-content: center;
+  align-items: center;
+  color: $color-text-inverted;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.54px;
+  border-radius: 45px;
+  border: none;
+  background-color: $color-button;
+}
