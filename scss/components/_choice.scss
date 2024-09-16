@@ -1,26 +1,31 @@
 .choice {
   margin: 70px 0 100px;
-
   &__content {
     padding-right: 40px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 237px 387px 1fr;
     align-items: center;
     background-color: $color-background-block-tertiary;
     border-radius: 119px 10px 10px 119px;
     gap: 40px;
-  }
-
-  &__questions {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: 0.48px;
+    height: 237px;
+    @include xl {
+      padding: 20px;
+      grid-template-columns: 1fr 1fr;
+      height: auto;
+      border-radius: 10px;
+    }
+    @include md {
+      padding: 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 
   &__image-container {
     position: relative;
-    
+    height: 100%;
+    width: 237px;
     &::after {
       content: '';
       position: absolute;
@@ -30,11 +35,32 @@
       width: 58px;
       height: 190px;
       background-image: url('../../assets/img/choice/question-marks.svg');
+      background-size: cover;
+      @include md {
+        width: 38.28px;
+        height: 125.4px;
+      }
     }
+    @include xl {
+      margin: 0 auto;
+    }
+    @include md {
+      width: 156.42px;
+    }
+  }
+
+  &__image {
+    width: 100%;
   }
 
   &__questions {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.48px;
+    width: max-content;
     &::after {
       content: '';
       position: absolute;
@@ -44,6 +70,19 @@
       width: 96px;
       height: 56px;
       background-image: url('../../assets/img/choice/heart.svg');
+      background-size: cover;
+      @include sm {
+        right: -16px;
+        top: 58px;
+        width: 48px;
+        height: 28px;
+      }
+    }
+    @include xl {
+      margin: 0 auto;
+    }
+    @include sm {
+      width: 100%;
     }
   }
 
@@ -56,33 +95,68 @@
     border: 1px solid $color-background-block-tertiary;
     border-radius: 115px;
     font-size: 16px;
-    width: max-content;
+    width: min-content;
+    text-align: center;
+    @include sm {
+      font-size: 14px;
+      line-height: normal;
+    }
     &:nth-child(1) {
       top: -9px;
       left: -21px;
       transform: rotate(-4.756deg);
       padding: 12px 53px 12px 48px;
+      @include sm {
+        left: 0;
+        margin: 0 auto;
+        padding: 12px 16px;
+      }
     }
     &:nth-child(2) {
       top: 1px;
       left: 39px;
       transform: rotate(8.881deg);
       padding: 12px 53px 12px 48px;
+      @include sm {
+        left: 0;
+        margin: 0 auto;
+        padding: 12px 16px;
+      }
     }
     &:nth-child(3) {
       top: 6px;
       left: -2px;
       transform: rotate(4.214deg);
       padding: 12px 20px 12px 15px;
+      @include sm {
+        left: 0;
+        margin: 0 auto;
+        padding: 12px 16px;
+        width: auto;
+        text-wrap: wrap;
+        border-radius: 34px;
+      }
+      @include xsm {
+        width: min-content;
+      }
     }
   }
 
   &__text-wrapper {
-    margin-left: -5px;
+    position: relative;
+    left: -5px;
     font-size: 21px;
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 0.63px;
+    @include xl {
+      left: 0px;
+      grid-area: 2 / 1 / 3 / 3;
+    }
+    @include md {
+      grid-area: auto;
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -90,7 +164,7 @@
       position: relative;
     }
   }
-  
+
   &__text-highlight {
     font-weight: 700;
   }
