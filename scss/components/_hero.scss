@@ -3,6 +3,7 @@
   background-image: url('../../assets/img/hero-bg.png');
   background-size: cover;
   background-position: right top;
+  z-index: 1000;
   @include lg {
     padding: 60px 0 0;
   }
