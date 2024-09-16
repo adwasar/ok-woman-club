@@ -1,0 +1,76 @@
+.relationship-happiness {
+  margin-top: 100px;
+  &__content {
+    position: relative;
+    padding: 71px 70px 70px 85px;
+    background-color: $color-background-block-secondary;
+    border-radius: 10px;
+  }
+
+  &__bg-icon-dots {
+    position: absolute;
+    left: 16px;
+    top: 9px;
+  }
+
+  &__bg-icon-circles {
+    position: absolute;
+    right: -41px;
+    top: 14px;
+  }
+
+  &__title {
+    position: relative;
+    left: -8px;
+    margin: 0;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.35px;
+    text-align: center;
+  }
+
+  &__title-highlight {
+    position: relative;
+    top: -2px;
+    left: -6px;
+    color: $color-text-secondary;
+    display: block;
+    text-align: center;
+  }
+
+  &__cards {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 35px;
+  }
+}
+
+.relationship-happiness-card {
+  position: relative;
+  padding: 40px 37px 40px 155px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+
+  background-color: $color-background-block-primary;
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-58%);
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 21px;
+    font-style: normal;
+    line-height: 140%;
+    letter-spacing: 0.63px;
+  }
+
+  &__text-highlight {
+    font-weight: 700;
+  }
+}
