@@ -1,22 +1,42 @@
 .relationship-happiness {
   margin-top: 100px;
+  @include lg {
+    margin-top: 60px;
+  }
   &__content {
     position: relative;
     padding: 71px 70px 70px 85px;
     background-color: $color-background-block-secondary;
     border-radius: 10px;
+    @include lg {
+      padding: 40px;
+    }
+    @include md {
+      padding: 20px;
+    }
   }
 
   &__bg-icon-dots {
     position: absolute;
     left: 16px;
     top: 9px;
+    @include lg {
+      left: 6px;
+      top: 4px;
+      width: 85px;
+    }
   }
 
   &__bg-icon-circles {
     position: absolute;
     right: -41px;
     top: 14px;
+    @include xxl {
+      right: -10px;
+    }
+    @include lg {
+      width: 90px;
+    }
   }
 
   &__title {
@@ -28,6 +48,17 @@
     line-height: 130%;
     letter-spacing: 1.35px;
     text-align: center;
+    @include xl {
+      font-size: 36px;
+    }
+    @include lg {
+      font-size: 32px;
+    }
+    @include md {
+      font-size: 28px;
+      margin: 0 auto;
+      max-width: 340px;
+    }
   }
 
   &__title-highlight {
@@ -44,6 +75,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 35px;
+    @include lg {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include md {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -53,6 +90,21 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
+  @include xxl {
+    padding: 30px 37px 30px 155px;
+  }
+  @include xl {
+    padding: 30px 25px 30px 120px;
+  }
+  @include lg {
+    padding: 30px 25px 30px 110px;
+  }
+  @include md {
+    padding: 20px 25px 20px 80px;
+  }
+  @include sm {
+    padding: 20px 25px 20px 60px;
+  }
 
   background-color: $color-background-block-primary;
   &__image {
@@ -60,6 +112,18 @@
     top: 50%;
     left: -15px;
     transform: translateY(-58%);
+    @include xl {
+      width: 120px;
+    }
+    @include lg {
+      width: 100px;
+    }
+    @include md {
+      width: 80px;
+    }
+    @include sm {
+      width: 60px;
+    }
   }
 
   &__text {
@@ -68,6 +132,12 @@
     font-style: normal;
     line-height: 140%;
     letter-spacing: 0.63px;
+    @include md {
+      font-size: 18px;
+    }
+    @include sm {
+      font-size: 14px;
+    }
   }
 
   &__text-highlight {
