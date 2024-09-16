@@ -90,6 +90,7 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
+  background-color: $color-background-block-primary;
   @include xxl {
     padding: 30px 37px 30px 155px;
   }
@@ -106,7 +107,6 @@
     padding: 20px 25px 20px 60px;
   }
 
-  background-color: $color-background-block-primary;
   &__image {
     position: absolute;
     top: 50%;
