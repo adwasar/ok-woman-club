@@ -2,17 +2,34 @@
   padding: 90px 0 0;
   background-image: url('../../assets/img/hero-bg.png');
   background-size: cover;
+  background-position: right top;
+  @include lg {
+    padding: 60px 0 0;
+  }
   &__content {
     display: flex;
-    gap: 54px;
+    justify-content: space-between;
+    gap: 24px;
+    @include lg {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__main-section {
     padding-bottom: 56px;
+    @include xl {
+      min-width: 440px;
+    }
+    @include lg {
+      min-width: auto;
+      padding-bottom: 0;
+    }
   }
 
   &__collection-materials-wrapper {
-    margin-top: 10px;
+    position: relative;
+    left: -4px;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -20,35 +37,59 @@
     font-weight: 400;
     line-height: 144%;
     letter-spacing: 0.72px;
-  }
-
-  &__collection-materials-image {
+    @include xl {
+      flex-direction: column;
+      align-items: start;
+    }
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__collection-materials-text {
     position: relative;
-    top: 2px;
-    margin-left: 18px;
+    top: 6px;
+    margin-left: 14px;
     font-size: 24px;
     font-weight: 400;
+    @include xl {
+      margin-left: 0;
+    }
   }
 
   &__collection-materials-logo-text {
     position: relative;
-    top: 2px;
+    top: 7px;
     font-size: 24px;
     font-weight: 700;
-    margin-left: 10px;
+    margin-left: 11px;
+    @include xl {
+      margin-left: 0;
+    }
   }
 
   &__title {
-    margin: 18px 0 0 1px;
+    margin: 16px 0 0 1px;
     max-width: 525px;
     font-size: 85px;
     font-weight: 800;
     line-height: 115%;
     letter-spacing: 2.55px;
     text-transform: uppercase;
+    @include xl {
+      font-size: 62px;
+      max-width: 370px;
+    }
+    @include lg {
+      margin: 18px auto 0;
+      font-size: 54px;
+      text-align: center;
+    }
+    @include sm {
+      max-width: 320px;
+      font-size: 42px;
+    }
   }
 
   &__title-highlight {
@@ -56,12 +97,16 @@
   }
 
   &__text {
-    margin-top: 13px;
+    margin: 13px 0 0;
     max-width: 505px;
     font-size: 18px;
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 0.54px;
+    @include lg {
+      text-align: center;
+      margin: 13px auto 0;
+    }
   }
 
   &__text-highlight {
@@ -70,37 +115,88 @@
 
   &__feedback {
     position: relative;
-    padding: 20px 20px 20px 65px;
+    margin: 21px 0 0 25px;
+    padding: 20px 20px 20px 39px;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 0.54px;
     border-radius: 10px;
-    background-image: url('../../assets/img/feedback-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    max-width: 491px;
+    background-color: rgba($color-ui-primary, 0.6);
+    box-sizing: border-box;
+    max-width: 466px;
+    @include lg {
+      margin: 21px auto 0;
+    }
+    @include sm {
+      margin: 21px 0 0 25px;
+    }
+    &::before {
+      content: '';
+      width: 54px;
+      height: 54px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 50%;
+      clip-path: inset(0 50% 0 0);
+      background-color: rgba($color-ui-primary, 0.6);
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__feedback-icon {
     position: absolute;
-    left: -20px;
-    border-radius: 50%;
-    opacity: 1;
-    display: none;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__feedback-text {
-    margin: 3px 0 0;
+    margin: 0;
   }
 
   &__button {
+    position: relative;
     margin-top: 25px;
+    @include lg {
+      margin: 25px auto 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../../assets/img/hero-heart.svg');
+      background-size: cover;
+      right: -157px;
+      width: 117px;
+      height: 71px;
+      @include md {
+        right: -90px;
+        width: 77.22px;
+        height: 46.86px;
+      }
+      @include sm {
+        display: none;
+      }
+    }
   }
 
   &__image-section {
+    width: 100%;
     display: flex;
     align-items: end;
+    max-width: 675px;
+    @include lg {
+      margin: 0 auto;
+      max-width: 440px;
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+    right: -9px;
+    width: 100%;
   }
 }

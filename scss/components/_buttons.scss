@@ -26,4 +26,7 @@
   border-radius: 45px;
   border: none;
   background-color: $color-button;
+  @include sm {
+    padding: 10px 36px;
+  }
 }
