@@ -1,6 +1,6 @@
 .hero {
   padding: 90px 0 0;
-  background-image: url('../../assets/img/hero-bg.png');
+  background-image: url('../assets/img/hero-bg.png');
   background-size: cover;
   background-position: right top;
   z-index: 1000;
@@ -167,7 +167,7 @@
     &::after {
       content: '';
       position: absolute;
-      background-image: url('../../assets/img/hero-heart.svg');
+      background-image: url('../assets/img/hero-heart.svg');
       background-size: cover;
       right: -157px;
       width: 117px;

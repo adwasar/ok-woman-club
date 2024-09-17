@@ -34,7 +34,7 @@
       display: block;
       width: 58px;
       height: 190px;
-      background-image: url('../../assets/img/choice/question-marks.svg');
+      background-image: url('../assets/img/choice/question-marks.svg');
       background-size: cover;
       @include md {
         width: 38.28px;
@@ -69,7 +69,7 @@
       display: block;
       width: 96px;
       height: 56px;
-      background-image: url('../../assets/img/choice/heart.svg');
+      background-image: url('../assets/img/choice/heart.svg');
       background-size: cover;
       @include sm {
         right: -16px;
